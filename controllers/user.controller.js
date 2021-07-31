@@ -70,6 +70,7 @@ module.exports.addPersonFavourite = async (req, res) => {
   addFavourite.movie = req.body.movie;
   addFavourite.series = req.body.series;
   addFavourite.anime = req.body.anime;
+  addFavourite.personId = req.body.personId;
   await knex("tbl_favourite")
     .insert(addFavourite)
     .then((doc) => {
