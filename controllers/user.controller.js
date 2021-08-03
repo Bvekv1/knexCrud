@@ -13,6 +13,7 @@ module.exports.addPerson = async (req, res) => {
       res.json({ status: "success", message: "success" });
     })
     .catch((err) => {
+      console.log(err)
       res.json({ status: "error", messae: "err" });
     });
 };
